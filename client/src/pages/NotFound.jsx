@@ -10,7 +10,7 @@ export default function NotFound(){
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
-      <div style={{ fontSize: 90, color: "#cd2c2e", lineHeight: 1 }}>😢</div>
+      <div style={{ fontSize: 90, color: "#cd2c2e", lineHeight: 1 }}>⛔</div>
       <h1>Erreur 404</h1>
       <p>Page non trouvée…</p>
       
