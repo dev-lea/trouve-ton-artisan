@@ -65,14 +65,42 @@ export default function Detail(){
 
   return (
     <section className="container artisan-show">
-      <Helmet><title>{artisan.name} — Trouve ton artisan</title></Helmet>
+      <Helmet>
+        <title>{artisan.name} — Trouve ton artisan</title>
+        <meta
+          name="description"
+          content={`Artisan ${artisan.Speciality?.name ?? ""} à ${artisan.city} (${artisan.department}). Contactez-le via le formulaire.`}
+        />
+        <meta property="og:title" content={`${artisan.name} — Trouve ton artisan`} />
+        <meta property="og:description" content={`Spécialité : ${artisan.Speciality?.name ?? "-"} — ${artisan.city} (${artisan.department}).`} />
+      </Helmet>
 
       {/* En-tête centré */}
       <div className="artisan-header text-center">
+        {/* Photo réduite */}
+        {artisan.photo && (
+          <img
+            src={`/${artisan.photo}`}
+            alt={`Photo de ${artisan.name}`}
+            className="artisan-img"
+            style={{ maxWidth: "180px", height: "auto", borderRadius: 8, margin: "0 auto 12px" }}
+          />
+        )}
+
         <h2 className="artisan-name">{artisan.name}</h2>
         <Rating note={artisan.rating || 0} />
         <p className="artisan-meta">Spécialité : {artisan.Speciality?.name || "-"}</p>
         <p className="artisan-meta">Localisation : {artisan.city} ({artisan.department})</p>
+
+        {/* ====== À PROPOS (DESCRIPTION) ====== */}
+        {artisan.about && (
+          <div style={{ margin: "16px 0 20px" }}>
+            <h3 className="page-title" style={{ fontSize: 20, marginBottom: 6 }}>
+              À propos
+            </h3>
+            <p className="artisan-about">{artisan.about}</p>
+          </div>
+        )}
 
         {/* Bouton toujours visible */}
         {artisan.website ? (

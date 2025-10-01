@@ -1,4 +1,3 @@
--- server/db/schema.sql
 CREATE DATABASE IF NOT EXISTS trouve_ton_artisan
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
@@ -32,8 +31,9 @@ CREATE TABLE artisans (
   about         TEXT,
   email         VARCHAR(255),
   website       VARCHAR(255),
+  photo         VARCHAR(255),
   city          VARCHAR(120),
-  department    VARCHAR(120),
+  department    VARCHAR(120),  
   speciality_id INT NOT NULL,
   is_top        TINYINT(1) NOT NULL DEFAULT 0,
   CONSTRAINT fk_artisans_speciality

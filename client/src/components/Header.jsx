@@ -37,33 +37,61 @@ export default function Header() {
         {/* Bouton burger visible seulement en mobile (géré en CSS) */}
         <button
           className="burger"
-          aria-label="Ouvrir le menu"
+          aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={menuOpen}
-          onClick={()=>setMenuOpen(v=>!v)}
+          aria-controls="main-navigation"
+          onClick={() => setMenuOpen((v) => !v)}
         >
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+
 
         {/* À droite : recherche + menu (panneau masqué en mobile) */}
         <div className={`header-right ${menuOpen ? "is-open" : ""}`}>
           {/* Recherche */}
-          <form onSubmit={onSearch} className="header-search" role="search">
-            <div className="search-pill">
-              <svg className="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="#0074C7" strokeWidth="2"/>
-                <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="#0074C7" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-              <input
-                className="search-input"
-                value={q}
-                onChange={(e)=>setQ(e.target.value)}
-                placeholder="Rechercher un artisan"
-              />
-            </div>
-          </form>
+            <form
+              onSubmit={onSearch}
+              className="header-search"
+              role="search"
+              aria-label="Recherche d'artisans"
+            >
+              <label className="visually-hidden" htmlFor="header-search">
+                Rechercher un artisan
+              </label>
+              <div className="search-pill">
+                <svg
+                  className="search-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle cx="11" cy="11" r="7" stroke="#0074C7" strokeWidth="2" />
+                  <line
+                    x1="16.5"
+                    y1="16.5"
+                    x2="22"
+                    y2="22"
+                    stroke="#0074C7"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <input
+                  id="header-search"
+                  className="search-input"
+                  value={q}
+                  onChange={(e) => setQ(e.target.value)}
+                  placeholder="Rechercher un artisan"
+                />
+              </div>
+            </form>
+
 
           {/* Menu catégories */}
-          <nav className="header-nav">
+          <nav id="main-navigation" className="header-nav" aria-label="Navigation principale">
             <ul className="nav gap-5">
               {cats.map(c => {
                 const isActive = activeCat === String(c.id);
@@ -72,7 +100,7 @@ export default function Header() {
                     <Link
                       to={`/artisans?category=${c.id}`}
                       className={`nav-link nav-link--ink${isActive ? " active" : ""}`}
-                      onClick={()=>setMenuOpen(false)}  // ferme le panneau après clic
+                      onClick={() => setMenuOpen(false)}
                     >
                       {c.name}
                     </Link>
@@ -81,6 +109,7 @@ export default function Header() {
               })}
             </ul>
           </nav>
+
         </div>
 
       </div>

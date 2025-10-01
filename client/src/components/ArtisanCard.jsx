@@ -36,6 +36,15 @@ export default function ArtisanCard({ a }) {
 
   return (
     <article className="card artisan--featured">
+      {/* Photo en premier */}
+      {a.photo && (
+        <img
+          src={`/${a.photo}`}
+          alt={`Photo de ${a.name}`}
+          className="artisan-img"
+        />
+      )}
+
       {/* Nom de l’artisan */}
       <h3 className="artisan-title">{a.name}</h3>
 
@@ -79,12 +88,7 @@ export default function ArtisanCard({ a }) {
         className="arrow-link"
         aria-label="Voir la fiche artisan"
       >
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
           <path
             d="M5 12h12M13 6l6 6-6 6"
             stroke="currentColor"
@@ -97,3 +101,4 @@ export default function ArtisanCard({ a }) {
     </article>
   );
 }
+

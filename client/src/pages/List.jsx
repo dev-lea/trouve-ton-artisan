@@ -43,7 +43,13 @@ export default function List(){
 
   return (
     <>
-      <Helmet><title>Liste des artisans</title></Helmet>
+          <Helmet>
+         <title>Liste des artisans — Trouve ton artisan</title>
+         <meta
+         name="description"
+         content="Parcourez les artisans par spécialité, département ou mots-clés et contactez le professionnel de votre choix."
+        />
+          </Helmet>
 
       <section className="section-list py-4">
         {/* Titre aligné comme les cartes */}
