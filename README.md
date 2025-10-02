@@ -52,7 +52,6 @@ Les particuliers peuvent consulter une fiche artisan et le contacter via un form
 ## Installation en local
 
 ### 1. Clonez le projet :
-```bash
 git clone https://github.com/dev-lea/trouve-ton-artisan.git
 cd trouve-ton-artisan
 
