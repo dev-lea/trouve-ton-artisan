@@ -1,5 +1,5 @@
--- server/db/seed.sql
-USE trouve_ton_artisan;
+SET NAMES utf8mb4;
+USE railway;
 
 INSERT INTO categories (name) VALUES
 ('Alimentation'),
