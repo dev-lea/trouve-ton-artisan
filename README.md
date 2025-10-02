@@ -99,5 +99,5 @@ API : Render
 Base de données : Railway
 Frontend : Netlify
 
-##Auteur
+## Auteur
 Projet réalisé par dev-léa dans le cadre du brief Trouve ton artisan.
