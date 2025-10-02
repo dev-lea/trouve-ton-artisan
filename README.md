@@ -5,16 +5,16 @@ Les particuliers peuvent consulter une fiche artisan et le contacter via un form
 
 ---
 
-## 🚀 Liens en production
+## Liens en production
 
-- **Frontend (Netlify)** : 👉 [https://ton-site.netlify.app](https://trouve-ton-artisan-front.netlify.app/)  
-- **API (Render)** : 👉 [https://trouve-ton-artisan-api-4cpy.onrender.com/api](https://trouve-ton-artisan-api-4cpy.onrender.com/api)  
-- **Repository GitHub** : 👉 [https://github.com/dev-lea/trouve-ton-artisan](https://github.com/dev-lea/trouve-ton-artisan)  
-- **Maquettes Figma** : 👉 [Voir les maquettes](https://www.figma.com/design/Y6OgqZQ0BJVVBL67b6kiv5/Trouve-ton-artisan?node-id=0-1&t=zZY43wX8cc9vWGUb-1)
+- **Frontend (Netlify)** : [https://ton-site.netlify.app](https://trouve-ton-artisan-front.netlify.app/)  
+- **API (Render)** : [https://trouve-ton-artisan-api-4cpy.onrender.com/api](https://trouve-ton-artisan-api-4cpy.onrender.com/api)  
+- **Repository GitHub** : [https://github.com/dev-lea/trouve-ton-artisan](https://github.com/dev-lea/trouve-ton-artisan)  
+- **Maquettes Figma** : [Voir les maquettes](https://www.figma.com/design/Y6OgqZQ0BJVVBL67b6kiv5/Trouve-ton-artisan?node-id=0-1&t=zZY43wX8cc9vWGUb-1)
 
 ---
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 - Recherche d’artisans par **nom**, **catégorie**, **spécialité** ou **département**.  
 - Fiches artisans détaillées :  
@@ -36,7 +36,7 @@ Les particuliers peuvent consulter une fiche artisan et le contacter via un form
 
 ---
 
-## 🛠️ Technologies utilisées
+## Technologies utilisées
 
 - **Frontend** : React.js, React Router, Vite, Sass, Bootstrap.  
 - **Backend** : Node.js, Express.js, Sequelize.  
@@ -49,7 +49,7 @@ Les particuliers peuvent consulter une fiche artisan et le contacter via un form
 
 ---
 
-## 📦 Installation en local
+## Installation en local
 
 ### 1. Clonez le projet :
 ```bash
